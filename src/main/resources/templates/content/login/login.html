@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login</title>
+</head>
+<body>
+<h1 data-qa="page title">Welcome to Java World</h1>
+
+<form action="#" th:action="@{''}" th:object="${loginFormData}" method="post">
+    <fieldset>
+        <legend>Login here...</legend>
+        User Name : <input type="text" id="userName" th:field="*{userName}" name="userName"/>
+        Password : <input type="password" id="password" th:field="*{password}" name="password"/>
+        <input type="submit" name="login" id="login"/>
+    </fieldset>
+</form>
+</body>
+</html>
